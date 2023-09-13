@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+.logo{
+    font-size: 40px;
+    user-select: none;
+}
+.navigation-bar a{
+    color: white;
+    margin-left: 20px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.navigation-bar .btn-join-us{
+    margin-left: 40px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.btn-join-us:hover{
+    color: rgb(18, 18, 83);
+    background-color: white;
+    font-weight: 600;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url('Background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight:bold;
+    background-color: rgba(65, 63, 63,0.50);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    transition: .20s ease-out;
+    backdrop-filter: blur(5px);
+}
+.icon:hover{
+    background-color: black;
+}
+.wrapper{
+    height: 370px;
+    width: 350px;
+    background-color: rgba(129, 120, 161, 0.25);
+    padding: 0 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transform: scale(0);
+    overflow: hidden;
+    transition: all .15s ease-in;
+    transition-delay: 0s;
+}
+.wrapper.active{
+    transform: scale(1);
+}
+.wrapper .login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateX(0);
+    width: 290px;
+    transition: transform .3s ease;
+    transition-delay: 0s;
+}
+.wrapper .reg-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 290px;
+    height: 100%;
+    top: 0;
+    transform: translate(400px);
+    transition: transform .3s ease;
+    transition-delay: 0s;
+}
+.wrapper.activereg .login-form{
+    transform: translateX(-400px);
+}
+.wrapper.activereg .reg-form{
+    transform: translateX(0);
+}
+.wrapper.activereg{
+    height: 500px;
+}
+.wrapper h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.input_box{
+    width: 100%;
+    position: relative;
+    top:40px;
+}
+.input_box input{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+    border-bottom: 2px solid white;
+    padding: 0 10px;
+    color: white;
+}
+.input_box label{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    font-size: 16px;
+    transition: all .3s;
+}
+.text-center{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    top: 10vh;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+}
+.text-center .btn{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+}
+.text-center .btn:hover{
+    background-color: white;
+    color: rgb(4, 4, 51);
+    border: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0,0.50);
+}
+input:valid~label,
+input:focus~label{
+    top: -35%;
+    font-size: 14px;
+}
+.text{
+    margin-top: 45px;
+    text-align: center;
+    font-size: 14px;
+}
+.text a{
+    color: white;
+    text-decoration: none;
+}
+.text a:hover{
+    text-decoration: underline;
+}
